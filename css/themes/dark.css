@@ -1,0 +1,138 @@
+/**
+ * Dark Theme
+ * Dark mode colors
+ * @author Oathan Rex
+ */
+
+[data-theme="dark"] {
+    /* ==================== BACKGROUND COLORS ==================== */
+
+    --bg-body: #0f172a;
+    --bg-primary: #1e293b;
+    --bg-secondary: #0f172a;
+    --bg-tertiary: #334155;
+    --bg-elevated: #1e293b;
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+
+    /* ==================== TEXT COLORS ==================== */
+
+    --text-primary: #f1f5f9;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --text-muted: #64748b;
+    --text-inverse: #0f172a;
+    --text-link: var(--primary-light);
+    --text-link-hover: var(--primary);
+
+    /* ==================== BORDER COLORS ==================== */
+
+    --border-color: #334155;
+    --border-color-light: #1e293b;
+    --border-color-dark: #475569;
+    --border-focus: var(--primary-light);
+
+    /* ==================== COMPONENT SPECIFIC ==================== */
+
+    /* Header */
+    --header-bg: rgba(15, 23, 42, 0.95);
+    --header-border: var(--border-color);
+    --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+
+    /* Cards */
+    --card-bg: var(--bg-primary);
+    --card-border: var(--border-color);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+    /* Inputs */
+    --input-bg: var(--bg-tertiary);
+    --input-bg-focus: var(--bg-tertiary);
+    --input-border: var(--border-color);
+    --input-border-focus: var(--primary-light);
+    --input-text: var(--text-primary);
+    --input-placeholder: var(--text-muted);
+
+    /* Buttons */
+    --btn-secondary-bg: var(--bg-tertiary);
+    --btn-secondary-text: var(--text-primary);
+    --btn-secondary-border: var(--border-color);
+    --btn-secondary-hover-bg: #475569;
+
+    /* Upload Area */
+    --upload-bg: var(--bg-primary);
+    --upload-border: var(--border-color);
+    --upload-border-hover: var(--primary-light);
+    --upload-bg-hover: rgba(99, 102, 241, 0.05);
+    --upload-bg-dragover: rgba(99, 102, 241, 0.1);
+
+    /* Preview Items */
+    --preview-item-bg: var(--bg-primary);
+    --preview-item-border: var(--border-color);
+    --preview-placeholder-bg: var(--bg-tertiary);
+
+    /* Progress Bar */
+    --progress-bg: var(--bg-tertiary);
+    --progress-fill: linear-gradient(90deg, var(--primary-light), var(--primary));
+
+    /* Slider */
+    --slider-track-bg: var(--bg-tertiary);
+    --slider-thumb-bg: var(--primary-light);
+    --slider-thumb-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+    /* Toast */
+    --toast-bg: var(--bg-primary);
+    --toast-border: var(--border-color);
+    --toast-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+    /* Footer */
+    --footer-bg: var(--bg-primary);
+    --footer-border: var(--border-color);
+    --footer-text: var(--text-tertiary);
+
+    /* Scrollbar */
+    --scrollbar-track: var(--bg-tertiary);
+    --scrollbar-thumb: var(--gray-600);
+    --scrollbar-thumb-hover: var(--gray-500);
+
+    /* Code / Mono */
+    --code-bg: var(--bg-tertiary);
+    --code-text: var(--text-primary);
+
+    /* Selection */
+    --selection-bg: rgba(129, 140, 248, 0.3);
+    --selection-text: inherit;
+
+    /* Focus Ring */
+    --focus-ring: 0 0 0 3px rgba(129, 140, 248, 0.4);
+
+    /* Shadows - Adjusted for dark mode */
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px -1px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* ==================== DARK MODE SPECIFIC ADJUSTMENTS ==================== */
+
+[data-theme="dark"] {
+    color-scheme: dark;
+}
+
+/* Improve image visibility in dark mode */
+[data-theme="dark"] .preview-image-container img,
+[data-theme="dark"] .download-image-container img {
+    background: var(--bg-tertiary);
+}
+
+/* Format badges with inverted colors */
+[data-theme="dark"] .format-info-icon {
+    filter: brightness(1.1);
+}
+
+/* Adjust gradient text for dark mode */
+[data-theme="dark"] .gradient-text {
+    background: linear-gradient(135deg, var(--primary-light) 0%, #a78bfa 50%, #f472b6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

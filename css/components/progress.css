@@ -1,0 +1,184 @@
+/**
+ * Progress Section Component Styles
+ * Conversion progress indicator
+ * @author Oathan Rex
+ */
+
+/* ==================== PROGRESS SECTION ==================== */
+
+.progress-section {
+    display: none;
+    margin-bottom: var(--spacing-10);
+}
+
+.progress-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+/* ==================== PROGRESS CONTAINER ==================== */
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-6);
+    padding: var(--spacing-8);
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 640px) {
+    .progress-container {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--spacing-6);
+    }
+}
+
+/* ==================== PROGRESS ICON ==================== */
+
+.progress-icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-50);
+    border-radius: var(--radius-xl);
+    flex-shrink: 0;
+}
+
+[data-theme="dark"] .progress-icon {
+    background: rgba(99, 102, 241, 0.15);
+}
+
+.progress-icon i {
+    font-size: 1.75rem;
+    color: var(--primary);
+}
+
+/* ==================== PROGRESS INFO ==================== */
+
+.progress-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ==================== PROGRESS BAR ==================== */
+
+.progress-bar {
+    height: 12px;
+    background: var(--progress-bg);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-bottom: var(--spacing-3);
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--progress-fill);
+    border-radius: var(--radius-full);
+    transition: width 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated shine effect */
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+/* ==================== PROGRESS TEXT ==================== */
+
+.progress-text {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+@media (max-width: 640px) {
+    .progress-text {
+        justify-content: center;
+    }
+}
+
+/* ==================== CANCEL BUTTON ==================== */
+
+.btn-cancel {
+    flex-shrink: 0;
+}
+
+/* ==================== STATES ==================== */
+
+/* Completed State */
+.progress-section.completed .progress-icon {
+    background: var(--success-50);
+}
+
+[data-theme="dark"] .progress-section.completed .progress-icon {
+    background: rgba(16, 185, 129, 0.15);
+}
+
+.progress-section.completed .progress-icon i {
+    color: var(--success);
+    animation: none;
+}
+
+.progress-section.completed .progress-icon i::before {
+    content: '\f00c';
+    /* Font Awesome check */
+}
+
+.progress-section.completed .progress-fill {
+    background: linear-gradient(90deg, var(--success), var(--success-600));
+}
+
+/* Error State */
+.progress-section.error .progress-icon {
+    background: var(--danger-50);
+}
+
+[data-theme="dark"] .progress-section.error .progress-icon {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+.progress-section.error .progress-icon i {
+    color: var(--danger);
+    animation: none;
+}
+
+.progress-section.error .progress-fill {
+    background: var(--danger);
+}
+
+/* ==================== INDETERMINATE PROGRESS ==================== */
+
+.progress-bar.indeterminate .progress-fill {
+    width: 30%;
+    animation: indeterminate 1.5s infinite ease-in-out;
+}
+
+@keyframes indeterminate {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(400%);
+    }
+}

@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO Meta Tags -->
+    <title>All-in-One Image Converter | Free Online Tool - Oathan Rex</title>
+    <meta name="description"
+        content="Convert, resize & compress images directly in your browser. Supports PNG, JPG, WEBP, BMP, ICO. 100% private - no server uploads. Free online image converter tool.">
+    <meta name="keywords"
+        content="image converter, png to jpg, webp converter, image resize, compress images, free online tool, batch image converter, ico converter">
+    <meta name="author" content="Oathan Rex">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oathanrex.github.io/image-converter/">
+    <meta property="og:title" content="All-in-One Image Converter | Free Online Tool">
+    <meta property="og:description"
+        content="Convert, resize & compress images directly in your browser. 100% private - no server uploads!">
+    <meta property="og:image" content="https://oathanrex.github.io/image-converter/assets/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://oathanrex.github.io/image-converter/">
+    <meta name="twitter:title" content="All-in-One Image Converter">
+    <meta name="twitter:description" content="Convert, resize & compress images in your browser. No uploads!">
+    <meta name="twitter:image" content="https://oathanrex.github.io/image-converter/assets/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/themes/light.css">
+    <link rel="stylesheet" href="css/themes/dark.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components/upload.css">
+    <link rel="stylesheet" href="css/components/preview.css">
+    <link rel="stylesheet" href="css/components/settings.css">
+    <link rel="stylesheet" href="css/components/progress.css">
+    <link rel="stylesheet" href="css/components/download.css">
+    <link rel="stylesheet" href="css/components/toast.css">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://oathanrex.github.io/image-converter/">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "All-in-One Image Converter",
+        "description": "Free online image converter - Convert, resize, and compress images directly in your browser",
+        "url": "https://oathanrex.github.io/image-converter/",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "author": {
+            "@type": "Person",
+            "name": "Oathan Rex",
+            "url": "https://oathanrex.github.io"
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip to Main Content (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="/" class="logo" aria-label="Image Converter Home">
+                <div class="logo-icon">
+                    <i class="fas fa-images" aria-hidden="true"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">ImageConverter</span>
+                    <span class="logo-subtitle">by Oathan Rex</span>
+                </div>
+            </a>
+
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="https://oathanrex.github.io" target="_blank" rel="noopener noreferrer" class="nav-link">
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                    <span>Portfolio</span>
+                </a>
+                <a href="https://github.com/oathanrex/image-converter" target="_blank" rel="noopener noreferrer"
+                    class="nav-link">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>GitHub</span>
+                </a>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main class="main" id="main-content" role="main">
+        <div class="container">
+
+            <!-- Hero Section -->
+            <section class="hero" aria-labelledby="hero-title">
+                <h1 id="hero-title" class="hero-title">
+                    All-in-One <span class="gradient-text">Image Converter</span>
+                </h1>
+                <p class="hero-description">
+                    Convert, resize & compress images directly in your browser.
+                    <strong>100% Private</strong> — No server uploads, ever!
+                </p>
+                <div class="hero-badges" role="list" aria-label="Features">
+                    <span class="badge" role="listitem">
+                        <i class="fas fa-lock" aria-hidden="true"></i>
+                        <span>Privacy First</span>
+                    </span>
+                    <span class="badge" role="listitem">
+                        <i class="fas fa-bolt" aria-hidden="true"></i>
+                        <span>Instant Processing</span>
+                    </span>
+                    <span class="badge" role="listitem">
+                        <i class="fas fa-infinity" aria-hidden="true"></i>
+                        <span>Unlimited Files</span>
+                    </span>
+                    <span class="badge" role="listitem">
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        <span>Works Offline</span>
+                    </span>
+                </div>
+            </section>
+
+            <!-- Upload Section -->
+            <section class="upload-section" aria-labelledby="upload-title">
+                <h2 id="upload-title" class="sr-only">Upload Images</h2>
+                <div class="upload-area" id="uploadArea" role="button" tabindex="0"
+                    aria-label="Upload images. Click or drag and drop files here.">
+                    <div class="upload-content">
+                        <div class="upload-icon-wrapper">
+                            <i class="fas fa-cloud-upload-alt upload-icon" aria-hidden="true"></i>
+                            <div class="upload-icon-pulse"></div>
+                        </div>
+                        <h3 class="upload-title">Drop images here</h3>
+                        <p class="upload-subtitle">or <span class="upload-browse">click to browse</span></p>
+                        <p class="upload-formats">
+                            <i class="fas fa-image" aria-hidden="true"></i>
+                            Supports: PNG, JPG, JPEG, WEBP, BMP, GIF
+                        </p>
+                    </div>
+                    <input type="file" id="fileInput" multiple accept="image/*" hidden aria-hidden="true">
+                </div>
+            </section>
+
+            <!-- Settings Panel -->
+            <section class="settings-panel" id="settingsPanel" aria-labelledby="settings-title">
+                <h2 id="settings-title" class="section-title">
+                    <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                    Conversion Settings
+                </h2>
+
+                <div class="settings-grid">
+                    <!-- Format Selection Card -->
+                    <div class="setting-card">
+                        <h3 class="setting-card-title">
+                            <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+                            Output Format
+                        </h3>
+                        <div class="format-buttons" role="radiogroup" aria-label="Select output format">
+                            <button class="format-btn active" data-format="png" role="radio" aria-checked="true"
+                                type="button">
+                                <span class="format-icon">PNG</span>
+                                <span class="format-desc">Lossless</span>
+                            </button>
+                            <button class="format-btn" data-format="jpeg" role="radio" aria-checked="false"
+                                type="button">
+                                <span class="format-icon">JPG</span>
+                                <span class="format-desc">Smaller</span>
+                            </button>
+                            <button class="format-btn" data-format="webp" role="radio" aria-checked="false"
+                                type="button">
+                                <span class="format-icon">WEBP</span>
+                                <span class="format-desc">Modern</span>
+                            </button>
+                            <button class="format-btn" data-format="bmp" role="radio" aria-checked="false"
+                                type="button">
+                                <span class="format-icon">BMP</span>
+                                <span class="format-desc">Raw</span>
+                            </button>
+                            <button class="format-btn" data-format="ico" role="radio" aria-checked="false"
+                                type="button">
+                                <span class="format-icon">ICO</span>
+                                <span class="format-desc">Icon</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Quality Slider Card -->
+                    <div class="setting-card">
+                        <h3 class="setting-card-title">
+                            <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                            Quality
+                            <span class="quality-badge" id="qualityValue">90%</span>
+                        </h3>
+                        <div class="slider-container">
+                            <input type="range" id="qualitySlider" class="quality-slider" min="10" max="100" value="90"
+                                aria-label="Image quality" aria-valuemin="10" aria-valuemax="100" aria-valuenow="90">
+                            <div class="slider-labels">
+                                <span>Low (Smaller)</span>
+                                <span>High (Larger)</span>
+                            </div>
+                        </div>
+                        <p class="setting-hint" id="qualityHint">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                            Quality setting applies to JPG and WEBP formats only.
+                        </p>
+                    </div>
+
+                    <!-- Resize Options Card -->
+                    <div class="setting-card">
+                        <h3 class="setting-card-title">
+                            <i class="fas fa-expand-arrows-alt" aria-hidden="true"></i>
+                            Resize Dimensions
+                        </h3>
+                        <div class="resize-options">
+                            <div class="resize-inputs">
+                                <div class="input-group">
+                                    <label for="widthInput" class="input-label">Width (px)</label>
+                                    <input type="number" id="widthInput" class="dimension-input" placeholder="Auto"
+                                        min="1" max="16384" aria-describedby="widthHelp">
+                                    <span id="widthHelp" class="sr-only">Leave empty to maintain original width</span>
+                                </div>
+
+                                <button class="link-btn active" id="linkDimensions" type="button"
+                                    aria-label="Lock aspect ratio" aria-pressed="true" title="Lock aspect ratio">
+                                    <i class="fas fa-link" aria-hidden="true"></i>
+                                </button>
+
+                                <div class="input-group">
+                                    <label for="heightInput" class="input-label">Height (px)</label>
+                                    <input type="number" id="heightInput" class="dimension-input" placeholder="Auto"
+                                        min="1" max="16384" aria-describedby="heightHelp">
+                                    <span id="heightHelp" class="sr-only">Leave empty to maintain original height</span>
+                                </div>
+                            </div>
+
+                            <div class="preset-sizes" role="group" aria-label="Preset sizes">
+                                <span class="preset-label">Quick presets:</span>
+                                <button class="preset-btn" data-width="1920" data-height="1080" type="button">
+                                    1080p
+                                </button>
+                                <button class="preset-btn" data-width="1280" data-height="720" type="button">
+                                    720p
+                                </button>
+                                <button class="preset-btn" data-width="800" data-height="600" type="button">
+                                    800×600
+                                </button>
+                                <button class="preset-btn" data-width="512" data-height="512" type="button">
+                                    512×512
+                                </button>
+                                <button class="preset-btn" data-width="256" data-height="256" type="button">
+                                    256×256
+                                </button>
+                                <button class="preset-btn" data-width="128" data-height="128" type="button">
+                                    128×128
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Additional Options Card -->
+                    <div class="setting-card">
+                        <h3 class="setting-card-title">
+                            <i class="fas fa-cog" aria-hidden="true"></i>
+                            Additional Options
+                        </h3>
+                        <div class="options-list">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="removeExif" checked>
+                                <span class="checkmark" aria-hidden="true"></span>
+                                <span class="checkbox-text">
+                                    <span class="checkbox-title">Remove EXIF data</span>
+                                    <span class="checkbox-desc">Strip metadata for privacy</span>
+                                </span>
+                            </label>
+
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="preserveTransparency" checked>
+                                <span class="checkmark" aria-hidden="true"></span>
+                                <span class="checkbox-text">
+                                    <span class="checkbox-title">Preserve transparency</span>
+                                    <span class="checkbox-desc">Keep alpha channel (PNG/WEBP)</span>
+                                </span>
+                            </label>
+
+                            <div class="bg-color-option" id="bgColorOption" style="display: none;">
+                                <label for="bgColorInput" class="input-label">Background Color</label>
+                                <div class="color-input-wrapper">
+                                    <input type="color" id="bgColorInput" value="#FFFFFF" class="color-input">
+                                    <span class="color-value">#FFFFFF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Preview Section -->
+            <section class="preview-section" id="previewSection" aria-labelledby="preview-title">
+                <div class="section-header">
+                    <h2 id="preview-title" class="section-title">
+                        <i class="fas fa-eye" aria-hidden="true"></i>
+                        Preview
+                        <span class="image-count">(<span id="imageCount">0</span> images)</span>
+                    </h2>
+                    <div class="section-actions">
+                        <button class="btn btn-secondary" id="clearAll" type="button">
+                            <i class="fas fa-trash-alt" aria-hidden="true"></i>
+                            <span>Clear All</span>
+                        </button>
+                        <button class="btn btn-primary btn-convert" id="convertAll" type="button">
+                            <i class="fas fa-magic" aria-hidden="true"></i>
+                            <span>Convert All</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="preview-grid" id="previewGrid" role="list" aria-label="Image previews">
+                    <!-- Dynamic content will be inserted here -->
+                    <div class="preview-empty">
+                        <i class="fas fa-images" aria-hidden="true"></i>
+                        <p>No images added yet</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section class="progress-section" id="progressSection" aria-labelledby="progress-title" aria-live="polite">
+                <h2 id="progress-title" class="sr-only">Conversion Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-icon">
+                        <i class="fas fa-cog fa-spin" aria-hidden="true"></i>
+                    </div>
+                    <div class="progress-info">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                            aria-valuemax="100">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <p class="progress-text" id="progressText">Preparing conversion...</p>
+                    </div>
+                    <button class="btn btn-secondary btn-cancel" id="cancelConversion" type="button"
+                        style="display: none;">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                        Cancel
+                    </button>
+                </div>
+            </section>
+
+            <!-- Download Section -->
+            <section class="download-section" id="downloadSection" aria-labelledby="download-title">
+                <div class="section-header">
+                    <h2 id="download-title" class="section-title">
+                        <i class="fas fa-download" aria-hidden="true"></i>
+                        Ready to Download
+                        <span class="download-stats" id="downloadStats"></span>
+                    </h2>
+                    <div class="section-actions">
+                        <button class="btn btn-success btn-large" id="downloadAllZip" type="button">
+                            <i class="fas fa-file-archive" aria-hidden="true"></i>
+                            <span>Download All (ZIP)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="download-grid" id="downloadGrid" role="list" aria-label="Converted images">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section" aria-labelledby="features-title">
+                <h2 id="features-title" class="section-title center">
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                    Why Choose Our Converter?
+                </h2>
+
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">100% Private</h3>
+                        <p class="feature-desc">
+                            All processing happens in your browser. Your images never leave your device —
+                            no uploads, no servers, no tracking.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-desc">
+                            Uses modern HTML5 Canvas API and ImageBitmap for instant processing.
+                            No waiting for server responses.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Batch Processing</h3>
+                        <p class="feature-desc">
+                            Convert hundreds of images at once. Download individually or as a
+                            convenient ZIP archive.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Open Source</h3>
+                        <p class="feature-desc">
+                            Built with vanilla JavaScript. Check out the code on GitHub, contribute,
+                            or fork for your own projects.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Works Everywhere</h3>
+                        <p class="feature-desc">
+                            Fully responsive design. Works on desktop, tablet, and mobile.
+                            No app installation needed.
+                        </p>
+                    </article>
+
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi-slash" aria-hidden="true"></i>
+                        </div>
+                        <h3 class="feature-title">Works Offline</h3>
+                        <p class="feature-desc">
+                            Once loaded, works without internet connection.
+                            Perfect for working on the go.
+                        </p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Supported Formats Section -->
+            <section class="formats-section" aria-labelledby="formats-title">
+                <h2 id="formats-title" class="section-title center">
+                    <i class="fas fa-file-image" aria-hidden="true"></i>
+                    Supported Formats
+                </h2>
+
+                <div class="formats-grid">
+                    <div class="format-info-card">
+                        <div class="format-info-icon png">PNG</div>
+                        <h4>Portable Network Graphics</h4>
+                        <p>Lossless compression, transparency support. Best for graphics, logos, screenshots.</p>
+                    </div>
+
+                    <div class="format-info-card">
+                        <div class="format-info-icon jpg">JPG</div>
+                        <h4>JPEG Image</h4>
+                        <p>Lossy compression, smaller files. Best for photographs and web images.</p>
+                    </div>
+
+                    <div class="format-info-card">
+                        <div class="format-info-icon webp">WEBP</div>
+                        <h4>WebP Image</h4>
+                        <p>Modern format, great compression. Supports both lossy and lossless.</p>
+                    </div>
+
+                    <div class="format-info-card">
+                        <div class="format-info-icon bmp">BMP</div>
+                        <h4>Bitmap Image</h4>
+                        <p>Uncompressed format. Large files, maximum quality preservation.</p>
+                    </div>
+
+                    <div class="format-info-card">
+                        <div class="format-info-icon ico">ICO</div>
+                        <h4>Windows Icon</h4>
+                        <p>Icon format for Windows. Perfect for favicons and application icons.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fas fa-images" aria-hidden="true"></i>
+                        <span>ImageConverter</span>
+                    </div>
+                    <p class="footer-tagline">
+                        Free, private, and powerful image conversion
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Links</h4>
+                        <ul>
+                            <li><a href="https://oathanrex.github.io" target="_blank" rel="noopener">Portfolio</a></li>
+                            <li><a href="https://github.com/oathanrex" target="_blank" rel="noopener">GitHub</a></li>
+                            <li><a href="https://github.com/oathanrex/image-converter/issues" target="_blank"
+                                    rel="noopener">Report Bug</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                            <li><a href="#terms">Terms of Use</a></li>
+                            <li><a href="https://github.com/oathanrex/image-converter/blob/main/LICENSE" target="_blank"
+                                    rel="noopener">MIT License</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">
+                    Built with <i class="fas fa-heart" style="color: #e74c3c;" aria-label="love"></i> by
+                    <a href="https://oathanrex.github.io" target="_blank" rel="noopener">Oathan Rex</a>
+                </p>
+                <p class="version">
+                    © 2024 All rights reserved. Version 2.0.0
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container (for notifications) -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+
+    <!-- JSZip Library (for ZIP downloads) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"
+        integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- FileSaver.js (optional - for better download support) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"
+        integrity="sha512-Qlv6VSKh1gDKGoJbnyA5RMXYcvnpIqhO++MhIM2fStMcGT9i2T//tSwYFlcyoRRDcDZ+TYHpH8azBBCyhpSeqw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Application Scripts -->
+    <!-- Option 1: ES Modules (Modern Browsers) -->
+    <script type="module" src="js/app.js"></script>
+
+    <!-- Option 2: Bundled Version (Better Compatibility) - Uncomment if using bundler -->
+    <!-- <script src="dist/app.bundle.js" defer></script> -->
+
+    <!-- Fallback for no-JS -->
+    <noscript>
+        <div style="padding: 40px; text-align: center; background: #fee2e2; color: #991b1b;">
+            <h2>JavaScript Required</h2>
+            <p>This application requires JavaScript to function. Please enable JavaScript in your browser settings.</p>
+        </div>
+    </noscript>
+</body>
+
+</html>

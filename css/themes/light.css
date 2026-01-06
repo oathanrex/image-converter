@@ -1,0 +1,112 @@
+/**
+ * Light Theme
+ * Default theme colors
+ * @author Oathan Rex
+ */
+
+:root,
+[data-theme="light"] {
+    /* ==================== BACKGROUND COLORS ==================== */
+
+    --bg-body: #f8fafc;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+
+    /* ==================== TEXT COLORS ==================== */
+
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-tertiary: #64748b;
+    --text-muted: #94a3b8;
+    --text-inverse: #ffffff;
+    --text-link: var(--primary);
+    --text-link-hover: var(--primary-dark);
+
+    /* ==================== BORDER COLORS ==================== */
+
+    --border-color: #e2e8f0;
+    --border-color-light: #f1f5f9;
+    --border-color-dark: #cbd5e1;
+    --border-focus: var(--primary);
+
+    /* ==================== COMPONENT SPECIFIC ==================== */
+
+    /* Header */
+    --header-bg: rgba(255, 255, 255, 0.95);
+    --header-border: var(--border-color);
+    --header-shadow: var(--shadow-sm);
+
+    /* Cards */
+    --card-bg: var(--bg-primary);
+    --card-border: var(--border-color);
+    --card-shadow: var(--shadow-sm);
+    --card-shadow-hover: var(--shadow-lg);
+
+    /* Inputs */
+    --input-bg: var(--bg-secondary);
+    --input-bg-focus: var(--bg-primary);
+    --input-border: var(--border-color);
+    --input-border-focus: var(--primary);
+    --input-text: var(--text-primary);
+    --input-placeholder: var(--text-muted);
+
+    /* Buttons */
+    --btn-secondary-bg: var(--bg-tertiary);
+    --btn-secondary-text: var(--text-primary);
+    --btn-secondary-border: var(--border-color);
+    --btn-secondary-hover-bg: var(--border-color);
+
+    /* Upload Area */
+    --upload-bg: var(--bg-primary);
+    --upload-border: var(--border-color);
+    --upload-border-hover: var(--primary);
+    --upload-bg-hover: rgba(99, 102, 241, 0.02);
+    --upload-bg-dragover: rgba(99, 102, 241, 0.05);
+
+    /* Preview Items */
+    --preview-item-bg: var(--bg-primary);
+    --preview-item-border: var(--border-color);
+    --preview-placeholder-bg: var(--bg-tertiary);
+
+    /* Progress Bar */
+    --progress-bg: var(--bg-tertiary);
+    --progress-fill: linear-gradient(90deg, var(--primary), var(--primary-light));
+
+    /* Slider */
+    --slider-track-bg: var(--bg-tertiary);
+    --slider-thumb-bg: var(--primary);
+    --slider-thumb-shadow: var(--shadow-md);
+
+    /* Toast */
+    --toast-bg: var(--bg-primary);
+    --toast-border: var(--border-color);
+    --toast-shadow: var(--shadow-xl);
+
+    /* Footer */
+    --footer-bg: var(--bg-primary);
+    --footer-border: var(--border-color);
+    --footer-text: var(--text-secondary);
+
+    /* Scrollbar */
+    --scrollbar-track: var(--bg-tertiary);
+    --scrollbar-thumb: var(--gray-400);
+    --scrollbar-thumb-hover: var(--gray-500);
+
+    /* Code / Mono */
+    --code-bg: var(--bg-tertiary);
+    --code-text: var(--text-primary);
+
+    /* Selection */
+    --selection-bg: rgba(99, 102, 241, 0.2);
+    --selection-text: inherit;
+
+    /* Focus Ring */
+    --focus-ring: 0 0 0 3px rgba(99, 102, 241, 0.3);
+
+    /* Gradient */
+    --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    --gradient-text: linear-gradient(135deg, var(--primary) 0%, #8b5cf6 50%, #ec4899 100%);
+}

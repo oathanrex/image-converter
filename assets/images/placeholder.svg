@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#e2e8f0"/>
+      <rect x="10" y="10" width="10" height="10" fill="#e2e8f0"/>
+    </pattern>
+  </defs>
+  <rect width="200" height="200" fill="url(#grid)"/>
+  <g fill="#94a3b8" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+    <text x="100" y="100">No Preview</text>
+  </g>
+</svg>

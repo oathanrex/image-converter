@@ -1,0 +1,275 @@
+/**
+ * Download Section Component Styles
+ * Converted images download area
+ * @author Oathan Rex
+ */
+
+/* ==================== DOWNLOAD SECTION ==================== */
+
+.download-section {
+    display: none;
+    margin-bottom: var(--spacing-10);
+}
+
+.download-section.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+/* Download Stats */
+.download-stats {
+    font-size: var(--text-sm);
+    font-weight: var(--font-normal);
+    color: var(--success);
+    margin-left: var(--spacing-2);
+}
+
+/* ==================== DOWNLOAD GRID ==================== */
+
+.download-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-5);
+}
+
+@media (min-width: 640px) {
+    .download-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+/* ==================== DOWNLOAD ITEM ==================== */
+
+.download-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+    overflow: hidden;
+    transition: var(--transition-all);
+    animation: scaleIn 0.3s ease;
+}
+
+.download-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* ==================== DOWNLOAD IMAGE CONTAINER ==================== */
+
+.download-image-container {
+    position: relative;
+    height: 140px;
+    background: var(--preview-placeholder-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Checkerboard for transparency */
+.download-image-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+        linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+        linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+    background-size: 12px 12px;
+    background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+[data-theme="dark"] .download-image-container::before {
+    background-image:
+        linear-gradient(45deg, #334155 25%, transparent 25%),
+        linear-gradient(-45deg, #334155 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #334155 75%),
+        linear-gradient(-45deg, transparent 75%, #334155 75%);
+}
+
+.download-image-container img {
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Format Badge */
+.download-format-badge {
+    position: absolute;
+    top: var(--spacing-2);
+    left: var(--spacing-2);
+    padding: var(--spacing-1) var(--spacing-2);
+    background: var(--bg-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-xs);
+    font-weight: var(--font-bold);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+    z-index: 2;
+}
+
+/* ==================== DOWNLOAD INFO ==================== */
+
+.download-info {
+    padding: var(--spacing-4);
+}
+
+.download-info h5 {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Size Info */
+.size-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-3);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.size-saved {
+    color: var(--success) !important;
+    font-weight: var(--font-semibold);
+}
+
+.size-increased {
+    color: var(--warning) !important;
+    font-weight: var(--font-semibold);
+}
+
+/* Dimension Info */
+.dimension-info {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    margin-bottom: var(--spacing-3);
+}
+
+/* Download Button */
+.download-info .btn {
+    width: 100%;
+}
+
+.download-single-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-2);
+    padding: var(--spacing-3);
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius-md);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    transition: var(--transition-all);
+}
+
+.download-single-btn:hover {
+    background: var(--primary-dark);
+}
+
+/* ==================== COMPARISON VIEW ==================== */
+
+.download-item.comparison {
+    position: relative;
+}
+
+.comparison-toggle {
+    position: absolute;
+    top: var(--spacing-2);
+    right: var(--spacing-2);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary);
+    border-radius: var(--radius-full);
+    color: var(--text-secondary);
+    font-size: var(--text-xs);
+    box-shadow: var(--shadow-sm);
+    z-index: 2;
+    transition: var(--transition-all);
+}
+
+.comparison-toggle:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* ==================== EMPTY STATE ==================== */
+
+.download-empty {
+    grid-column: 1 / -1;
+    padding: var(--spacing-12);
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.download-empty i {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-4);
+    opacity: 0.3;
+}
+
+/* ==================== SUMMARY CARD ==================== */
+
+.download-summary {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-5);
+    background: var(--success-50);
+    border: 1px solid var(--success-100);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-4);
+}
+
+[data-theme="dark"] .download-summary {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.summary-stats {
+    display: flex;
+    gap: var(--spacing-8);
+}
+
+.summary-stat {
+    text-align: center;
+}
+
+.summary-stat-value {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--success);
+}
+
+.summary-stat-label {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+    .download-summary {
+        flex-direction: column;
+        gap: var(--spacing-4);
+        text-align: center;
+    }
+
+    .summary-stats {
+        justify-content: center;
+    }
+}
